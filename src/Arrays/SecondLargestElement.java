@@ -20,10 +20,26 @@ public class SecondLargestElement {
         }
         return secondLar;
     }
+    int seconfLar2(int[] nums){
+        int largest = nums[0];
+        for(int i =0; i< nums.length; i++){
+            if(nums[i]> largest){
+                largest = nums[i];
+            }
+        }
+        int secondLar = -1;
+        for(int i =0; i< nums.length; i++){
+            if(nums[i] > secondLar && nums[i]<largest){
+                secondLar = nums[i];
+            }
+        }
+        return secondLar;
+    }
 
     public static void main(String[] args) {
         SecondLargestElement sec = new SecondLargestElement();
         int[] nums = { 7,3,4,2,1,7,7,2,0};
         System.out.println(sec.secondLar1(nums));
+        System.out.println(sec.seconfLar2(nums));
     }
 }
