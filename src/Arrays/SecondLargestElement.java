@@ -29,9 +29,25 @@ public class SecondLargestElement {
         }
         int secondLar = -1;
         for(int i =0; i< nums.length; i++){
-            if(nums[i] > secondLar && nums[i]<largest){
+            if(nums[i] > secondLar && nums[i]
+                    <largest){
                 secondLar = nums[i];
             }
+        }
+        return secondLar;
+    }
+    int secondLar3(int[] arr){
+        int largest = arr[0];
+        int secondLar = -1;
+        for(int i =0; i<arr.length; i++){
+            if(arr[i] > largest){
+                secondLar = largest;
+                largest = arr[i];
+
+            } else if (arr[i] < largest && arr[i] > secondLar) { // If we put this condition swapped before && it will not yeild correct output
+                secondLar = arr[i];
+            }
+
         }
         return secondLar;
     }
@@ -41,5 +57,6 @@ public class SecondLargestElement {
         int[] nums = { 7,3,4,2,1,7,7,2,0};
         System.out.println(sec.secondLar1(nums));
         System.out.println(sec.seconfLar2(nums));
+        System.out.println(sec.secondLar3(nums));
     }
 }
