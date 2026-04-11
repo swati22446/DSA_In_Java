@@ -31,5 +31,6 @@ public class CheckIfArrayIsSorted {
         CheckIfArrayIsSorted sort = new CheckIfArrayIsSorted();
         int[] arr = {2 , 1 , 2 , 3};
         System.out.println(sort.isSorted(arr));
+        System.out.println(sort.isSorted2(arr));
     }
 }
