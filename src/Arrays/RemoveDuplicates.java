@@ -29,12 +29,27 @@ public class RemoveDuplicates {
         System.out.println(set);
     }
 
+    //Third approach -- only using array
+    void removeDuplicates3(int[] arr) {
+        int n = arr.length;
+        int i = 0;
+        for (int j = 1; j < n; j++) {
+            if (arr[j] != arr[i]) {
+                i++;
+                arr[i] = arr[j];
+            }
+        }
+        for(int k =0; k <=i ; k++){
+            System.out.print(arr[k] + ", ");
+        }
+    }
 
     public static void main(String[] args) {
         RemoveDuplicates rev = new RemoveDuplicates();
         int[] arr = {2, 3 ,2 , 4 , 1};
+        Arrays.sort(arr);
         rev.removeDuplicates(arr);
         rev.removeDuplicates2(arr);
-
+        rev.removeDuplicates3(arr);
     }
 }
