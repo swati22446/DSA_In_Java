@@ -13,8 +13,8 @@ public class LeftRotateTheArrayByDPlaces {
         for(int i = d ; i < n; i++){
             arr[i-d] = arr[i];
         }
-        for(int i = d+1; i < n; i++){
-            arr[i] = small[i - (d+1)];
+        for(int i = n-d; i < n; i++){
+            arr[i] = small[i - (n -d)];
         }
         System.out.println(Arrays.toString(arr));
 
@@ -24,6 +24,6 @@ public class LeftRotateTheArrayByDPlaces {
     public static void main(String[] args) {
         LeftRotateTheArrayByDPlaces left = new LeftRotateTheArrayByDPlaces();
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
-        left.LeftRotation(nums, 3);
+        left.LeftRotation(nums, 4);
     }
 }
