@@ -22,10 +22,33 @@ public class MoveZeroesToEnd {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+    // The corrected one that won't cause overflow since i is moving independently in first one
+    void moveZeroes(int[] arr){
+        int n = arr.length;
+        int j = -1;
+        for(int i = 0; i < n; i++){
+            if(arr[i] == 0){
+                j = i; // prevents j from exceeding the value of n
+                break;
+            }
+        }
+        if(j== -1) return;
+
+        for(int i = j+1; i < n; i++){
+            if(arr[i] != 0){
+                swap(arr, i,j);
+                j++;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 
     public static void main(String[] args) {
         MoveZeroesToEnd move = new MoveZeroesToEnd();
         int[] arr ={1,0,2,3,2,0,0,4,5,1};
-        move.moveZeroesToEnd(arr);
+//        int[] arr = {1,2,3,4,5};
+//        move.moveZeroesToEnd(arr);
+        move.moveZeroes(arr);
+
     }
 }
