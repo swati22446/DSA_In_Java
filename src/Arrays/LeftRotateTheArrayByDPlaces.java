@@ -45,10 +45,10 @@ public class LeftRotateTheArrayByDPlaces {
     public static void main(String[] args) {
         LeftRotateTheArrayByDPlaces left = new LeftRotateTheArrayByDPlaces();
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
-//        left.LeftRotation(nums, 5); // You can put any value according to your choice
+        left.LeftRotation(nums, 5); // You can put any value according to your choice
 //        left.LeftRotate2(nums,5);
 //        left.reverse(nums,0,nums.length);
-        left.LeftRotate2(nums,5);
+//        left.LeftRotate2(nums,5);
 
     }
 }
