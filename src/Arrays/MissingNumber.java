@@ -1,4 +1,5 @@
 package Arrays;
+import java.util.*;
 
 public class MissingNumber {
     // my approach1
@@ -28,11 +29,29 @@ public class MissingNumber {
         }
         return sum-sumOfArray;
     }
+    // optimal approach
+    int missingNumber(int[] arr) {
+        int n = arr.length;
+
+        int xor1 = 0; // XOR of 1 to n+1
+        int xor2 = 0; // XOR of array
+
+        for(int i = 1; i <= n+1; i++) {
+            xor1 ^= i;
+        }
+
+        for(int i = 0; i < n; i++) {
+            xor2 ^= arr[i];
+        }
+
+        return xor1 ^ xor2;
+    }
 
     public static void main(String[] args) {
         MissingNumber miss = new MissingNumber();
         int[] arr = {1 , 2, 4 , 5};
         System.out.println(miss.miss(arr));
         System.out.println(miss.miss2(arr));
+        System.out.println(miss.missingNumber(arr));
     }
 }
