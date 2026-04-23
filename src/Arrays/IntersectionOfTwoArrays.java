@@ -12,7 +12,7 @@ public class IntersectionOfTwoArrays {
                 if(arr[i] == nums[j] && vis[j] == false){
                     list.add(arr[i]);
                     vis[j] = true;
-                    break; // Will only terminate the innermost loop within which it exists
+                    break; // Will only terminate the innermost loop within which it exists.
                 }
                 if (nums[j] > arr[i]){
                     break;
