@@ -19,7 +19,7 @@ public class RemoveDuplicates {
 
     }
 
-    //Second appraoch -- using set
+    //Second approach -- using set
     void removeDuplicates2(int[] arr){
         int n = arr.length;
         LinkedHashSet<Integer> set = new LinkedHashSet<>();
