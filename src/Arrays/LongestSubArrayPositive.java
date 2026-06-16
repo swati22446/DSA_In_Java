@@ -17,20 +17,24 @@ public class LongestSubArrayPositive {
         }
         return len;
     }
-//    int longest2(int[] arr, int k){
-//        int n = arr.length;
-//        int sum = arr[0];
-//        int maxLen = 0;
-//        int left =0, right =0;
-//        while (right < n){
-//            while(left <= right && sum > k);
-//        }
-//
-//    }
+    int longestSubArrayBetterBrute(int[] arr, int k){
+        int n = arr.length;
+        int len = 0;
+        int sum;
+        for(int i =0; i < n; i++){
+            sum =0;
+            for(int j =i; j< n; j++){
+                sum += arr[j];
+                if (sum == k) len = Integer.max(len, j - i +1);
+            }
+        }
+        return len;
+    }
 
     public static void main(String[] args) {
         LongestSubArrayPositive subArray = new LongestSubArrayPositive();
         int[] arr = {10, 5, 2, 7, 1, 9};
         System.out.println(subArray.longest(arr,15));
+//        System.out.println(subArray.longestSubArrayBetterBrute(arr,15));
     }
 }
