@@ -51,4 +51,8 @@ public class MoveZeroesToEnd {
         move.moveZeroes(arr);
 
     }
+
+    public static class LongestSubArrayPositive {
+
+    }
 }
