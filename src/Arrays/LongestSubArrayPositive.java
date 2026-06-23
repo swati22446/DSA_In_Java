@@ -30,6 +30,22 @@ public class LongestSubArrayPositive {
         }
         return len;
     }
+//    int longestSubArrayIncludingZero(int[] arr, int k){
+//        int n = arr.length;
+//        int len = 0;
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//        int sum = 0;
+//        for(int i = 0; i<n; i++){
+//            sum += arr[i];
+//            if(sum == k) {
+//                len = Integer.max(len, i+1);
+//            }
+//
+//            int rem = sum - k;
+//
+//
+//        }
+//    }
 
     public static void main(String[] args) {
         LongestSubArrayPositive subArray = new LongestSubArrayPositive();
