@@ -30,9 +30,6 @@ public class FindSubarraySumNonNegative {
                 start += 1;
             }
             if (window_sum == sum) return true;
-            else {
-                continue;
-            }
         }
         return false;
     }
